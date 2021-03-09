@@ -3,7 +3,7 @@ import Gallery from '../images/gallery.gif'
 import Git from '../images/github.jpg'
 import Crud from '../images/CRUD.jpeg'
 import Meal from '../images/meal.jpg'
-import {motion} from 'framer-motion'
+// import {motion} from 'framer-motion'
 
 
 const Projects = () => {
@@ -47,14 +47,14 @@ const Projects = () => {
         <div className="projects-cont">
             
            {prjs.map((prj) =>(
-               <motion.div className="prj-cont" key={prj.id} 
-               initial={{ scale: 0 }}
-               animate={{ rotate: 360, scale: 1 }}
-               transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 10
-              }}
+               <div className="prj-cont" key={prj.id} 
+            //    initial={{ scale: 0 }}
+            //    animate={{ rotate: 360, scale: 1 }}
+            //    transition={{
+            //     type: "spring",
+            //     stiffness: 100,
+            //     damping: 10
+            //   }}
               >
                    
                    <img src={prj.imageUrl} alt=""/>
@@ -64,7 +64,7 @@ const Projects = () => {
                         <h3>Stacks used: <span >{prj.stack}</span></h3>
                         <h5>Click for: <a href={prj.LinkURL} target="_blank"rel="noreferrer"> Live Link</a> </h5>
                     </div>
-               </motion.div>
+               </div>
            ))}
         </div>
         
